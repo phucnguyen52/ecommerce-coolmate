@@ -2,8 +2,8 @@ import React from 'react'
 
 function Footer() {
     return (
-        <footer>
-            <div className="bg-black text-white">
+        <footer className="bg-black text-white ">
+            <div className="bg-black text-white w-[1392px] mr-auto ml-auto my-0">
                 <div className="flex flex-row items-center justify-between p-8">
                     <div className="w-[380px]">
                         <span className="text-xl font-bold">COOLMATE lắng nghe bạn!</span> <br></br>
