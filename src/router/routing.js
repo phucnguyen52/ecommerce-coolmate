@@ -1,27 +1,26 @@
-import {
-    redirect,
-    createBrowserRouter,
-    useNavigate,
-    Route,
-} from "react-router-dom";
-import ComponentPage from "../Pages/ComponentPage";
-import MainLayout from "../Layout/MainLayout/MainLayout";
-import { APP_ROUTER } from "../utils/Constants";
-import HomePage from "../Pages/Home/HomePage";
-import ProductPage from "../Pages/ProductPage/ProductPage";
-import OrderPage from "../Pages/OrderPage/OrderPage";
-import UserPage from "../Pages/UserPage/UserPage";
-import AuthLayout from "../Layout/AuthLayout/AuthLayout";
-import Login from "../Pages/Auth/Login";
-import Register from "../Pages/Auth/Register";
-import { loaderUser } from "./loader/loaderAuth";
-import CategoryPage from "../Pages/CategoryPage/CategoryPage";
+import { createBrowserRouter, redirect } from 'react-router-dom'
+import { APP_ROUTER } from '../utils/Constants'
+import MainLayout from '../layout/Main/MainLayout'
+import AuthLayout from '../layout/Auth/AuthLayout'
+import HomePage from '../page/Home/HomePage'
+
+import ProductPage from '../page/Product/ProductPage'
+import Login from '../page/Auth/Login/Login'
+import Register from '../page/Auth/Register/Register'
 
 const router = createBrowserRouter([
     {
-        path: APP_ROUTER.INDEX,
+        path: '/',
+        loader: () => {
+            if (!localStorage.getItem('user')) {
+                throw redirect(APP_ROUTER.HOME)
+            }
+            return null
+        },
+    },
+    {
+        path: '/',
         element: <MainLayout />,
-        loader: (request) => loaderUser(request),
         children: [
             {
                 path: APP_ROUTER.HOME,
@@ -32,24 +31,9 @@ const router = createBrowserRouter([
                 path: APP_ROUTER.PRODUCT,
                 element: <ProductPage />,
             },
-            {
-                path: APP_ROUTER.CATEGORY,
-                element: <CategoryPage />,
-            },
-            {
-                path: APP_ROUTER.ORDER,
-                element: <OrderPage />,
-            },
-            {
-                path: APP_ROUTER.USER,
-                element: <UserPage />,
-            },
-            {
-                path: APP_ROUTER.COMPONENT,
-                element: <ComponentPage />,
-            },
         ],
     },
+
     {
         path: APP_ROUTER.AUTH,
         element: <AuthLayout />,
@@ -65,6 +49,6 @@ const router = createBrowserRouter([
             },
         ],
     },
-]);
+])
 
-export default router;
+export default router
