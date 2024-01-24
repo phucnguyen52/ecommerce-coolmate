@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
-import Header from '../../components/shared/header/Header'
-import Footer from '../../components/shared/footer/Footer'
+import Header from '../../components/header/Header'
+import Footer from '../../components/footer/Footer'
 import { APP_ROUTER } from '../../utils/Constants'
 
 function MainLayout() {
