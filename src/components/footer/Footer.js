@@ -1,11 +1,12 @@
 import React from 'react'
+import run from '../../assets/svg/run.jpg'
 
 function Footer() {
     return (
         <footer className="bg-black text-white ">
-            <div className="my-0 ml-auto mr-auto w-[1392px] bg-black py-6 text-white">
+            <div className="my-0 ml-auto mr-auto w-[calc(100%-120px)] bg-black py-6 text-white">
                 <div className="flex flex-row justify-between">
-                    <div className="w-[450px]">
+                    <div className="w-1/3">
                         <span className="text-xl font-bold">COOLMATE lắng nghe bạn!</span> <br></br>
                         <span className="text-[12px] ">
                             Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ khách hàng để có thể
@@ -16,8 +17,8 @@ function Footer() {
                             Đóng góp ý kiến
                         </div>
                     </div>
-                    <div>
-                        <div className="flex w-[310px] flex-row items-center">
+                    <div className="w-[22%]">
+                        <div className="flex flex-row items-center">
                             <img src="https://www.coolmate.me/images/footer/icon-hotline.svg" alt="icon" />
                             <div className="">
                                 <div className="ml-4 text-xs font-semibold">Hotline</div>
@@ -34,7 +35,7 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center h-[130px] w-[400px] justify-between">
+                    <div className="flex items-center h-[130px] w-[30%] justify-between">
                         <img
                             className="h-9 mr-8 w-6 cursor-pointer object-contain"
                             src="https://mcdn.coolmate.me/image/June2023/mceclip1_43.png"
@@ -106,7 +107,7 @@ function Footer() {
                         <p className="my-5 cursor-pointer text-[12px] hover:text-yellow-500">Nhà máy</p>
                         <p className="my-5 cursor-pointer text-[12px] hover:text-yellow-500">Care & Share</p>
                     </div>
-                    <div className="w-[260px]">
+                    <div className="w-[20%]">
                         <p className="my-5 font-bold">ĐỊA CHỈ LIÊN HỆ</p>
                         <p className="my-6 cursor-pointer text-[12px] hover:text-yellow-500">
                             <i className="not-italic underline decoration-solid ">Văn phòng Hà Nội:</i> Tầng 3-4, Tòa nhà BMM, KM2, Đường Phùng Hưng, Phường Phúc La, Quận Hà
@@ -120,13 +121,13 @@ function Footer() {
                 </div>
                 <hr className="border-1 mx-0 border-gray-700 mt-6"></hr>
                 <div className="flex flex-row justify-between mt-2">
-                    <div>
+                    <di className="w-[60%]">
                         <p className="my-2 text-[12px] text-xs font-normal">@ CÔNG TY TNHH FASTECH ASIA</p>
                         <p className="my-2 text-[12px] text-xs font-normal">
                             Mã số doanh nghiệp: 0108617038. Giấy chứng nhận đăng ký doanh nghiệp do Sở Kế hoạch và Đầu
                             tư TP Hà Nội cấp lần đầu ngày 20/02/2019.
                         </p>
-                    </div>
+                    </di>
                     <div className="flex flex-row">
                         <img
                             className="mr-4 w-24 cursor-pointer object-contain"
